@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e9effc 0%, #dbe6f6 100%);
+    min-height: 100vh;
+    color: #222;
+}
+
+.navbar {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 2.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 40px;
+    margin-right: 12px;
+}
+.brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.main-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem 0 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.left-panel {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.5rem 2rem 2.5rem 0;
+}
+.main-title {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+.subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+.input-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.input-text.large {
+    width: 100%;
+    min-height: 70px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    padding: 1.2rem 1rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    outline: none;
+    transition: border 0.2s;
+}
+.input-text.large:focus {
+    border-color: #6a82fb;
+}
+.btn.main-btn {
+    width: 60%;
+    background: #d1d5db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+.btn.main-btn:hover {
+    background: #6a82fb;
+    color: #fff;
+}
+
+.right-panel {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 0 2.5rem 2rem;
+}
+.meme-preview-box {
+    width: 420px;
+    height: 420px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.meme-preview {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    background: #f0f0f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.meme-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.meme-text {
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px #000, 0 0 2px #000;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0.2em 0.1em;
+    pointer-events: none;
+    user-select: none;
+}
+.meme-text.top {
+    top: 10px;
+}
+.meme-text.bottom {
+    bottom: 10px;
+}
+.meme-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #7b8ca7;
+    font-size: 1.2rem;
+    gap: 1.2rem;
+}
+.meme-emoji {
+    font-size: 3rem;
+}
+.footer {
+    background: #fff;
+    color: #888;
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+}
+.footer a {
+    color: #6a82fb;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .main-flex {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+    .left-panel, .right-panel {
+        padding: 1rem 0;
+        align-items: center;
+    }
+    .meme-preview-box {
+        width: 100%;
+        max-width: 380px;
+        height: 340px;
+    }
+    .meme-preview {
+        width: 95%;
+        height: 95%;
+    }
+} 
